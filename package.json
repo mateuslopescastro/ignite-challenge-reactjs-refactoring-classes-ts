@@ -28,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server server.json -p 3333"
+    "server": "json-server server.json -p 3333",
+    "format": "prettier --write src/**/*.{ts,tsx}"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
     "@types/react-modal": "^3.13.1",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
-    "json-server": "^0.16.3"
+    "json-server": "^0.16.3",
+    "prettier": "^2.7.1"
   }
 }

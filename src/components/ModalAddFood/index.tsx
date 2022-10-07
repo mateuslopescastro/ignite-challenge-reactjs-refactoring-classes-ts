@@ -1,26 +1,26 @@
-import React, { createRef } from "react";
-import { FiCheckSquare } from "react-icons/fi";
-import { FormHandles } from "@unform/core";
+import { createRef } from "react"
+import { FiCheckSquare } from "react-icons/fi"
+import { FormHandles } from "@unform/core"
 
-import { IFood } from "../../types";
+import { IFood } from "../../types"
 
-import { Modal } from "../Modal";
-import { Input } from "../Input";
+import { Modal } from "../Modal"
+import { Input } from "../Input"
 
-import { Form } from "./styles";
+import { Form } from "./styles"
 
 interface ModalAddFoodProps {
-  isOpen: boolean;
-  setIsOpen: () => void;
-  handleAddFood: (food: IFood) => void;
+  isOpen: boolean
+  setIsOpen: () => void
+  handleAddFood: (food: IFood) => void
 }
 
 export function ModalAddFood(props: ModalAddFoodProps) {
-  const formRef = createRef<FormHandles>();
+  const formRef = createRef<FormHandles>()
 
   async function handleSubmit(data: IFood) {
-    props.handleAddFood(data);
-    props.setIsOpen();
+    props.handleAddFood(data)
+    props.setIsOpen()
   }
 
   return (
@@ -41,5 +41,5 @@ export function ModalAddFood(props: ModalAddFoodProps) {
         </button>
       </Form>
     </Modal>
-  );
+  )
 }

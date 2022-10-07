@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import ReactModal from "react-modal";
+import { ReactNode, useEffect, useState } from "react"
+import ReactModal from "react-modal"
 
 interface ModalProps {
-  children: React.ReactNode;
-  isOpen: boolean;
-  setIsOpen: () => void;
+  children: ReactNode
+  isOpen: boolean
+  setIsOpen: () => void
 }
 
 export function Modal(props: ModalProps) {
-  const [modalStatus, setModalStatus] = useState(props.isOpen);
+  const [modalStatus, setModalStatus] = useState(props.isOpen)
 
   useEffect(() => {
-    setModalStatus(props.isOpen);
-  }, [props.isOpen]);
+    setModalStatus(props.isOpen)
+  }, [props.isOpen])
 
   return (
     <ReactModal
@@ -32,14 +32,14 @@ export function Modal(props: ModalProps) {
           color: "#000000",
           borderRadius: "8px",
           width: "736px",
-          border: "none",
+          border: "none"
         },
         overlay: {
-          backgroundColor: "#121214e6",
-        },
+          backgroundColor: "#121214e6"
+        }
       }}
     >
       {props.children}
     </ReactModal>
-  );
+  )
 }
